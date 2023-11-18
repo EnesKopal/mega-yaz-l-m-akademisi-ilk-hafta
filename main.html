@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>MEGA Yazılım Akademisi</title>
+</head>
+<body>
+    <div id="hesapMakinesi">
+        <div id="ekran">
+          <input type="text" id="sonucekran"><button>C</button>
+        </div>
+        <div id="sayilar">
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button>+</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button>-</button>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>/</button>
+          <button>0</button>
+          <button>.</button>
+          <button>=</button>
+          <button>*</button>
+        </div>
+      </div>
+
+      <style>
+        #hesapMakinesi {
+          margin: 0 auto;
+          width: 350px;
+          height: auto;
+          background-color:gray;
+          border-radius: 5px;
+          padding: 10px;
+        }
+      
+        #ekran {
+          padding: 10px 0px 10px 0px;
+          text-align: center;
+        }
+      
+        #sonucekran {
+          padding: 5px;
+          width: 66%;
+          border: none;
+          border-radius: 5px;
+          text-align: left;
+          font-size: 50px;
+          word-wrap: break-word;
+        }
+      
+        #sayilar {
+          text-align: center;
+        }
+      
+        button {
+          width: 70px;
+          height: 50px;
+          margin: 4px;
+          border-radius: 5px;
+          background-color:blue;
+        
+        }
+      </style>
+<script>
+    "use strict";
+      var _sayilar = document.getElementsByTagName("button"),
+        _sayiUzunluk = _sayilar.length,
+        i = 0,
+        _sonuc = document.getElementById("sonucekran");
+    
+      for (i = 0; i < _sayiUzunluk; i++) {
+        _sayilar[i].onclick = hesapla;
+      }
+    
+      function hesapla() {
+        var _deger = this.innerHTML;
+    
+        if (_deger == "=") {
+          try {
+            _sonuc.value = eval(_sonuc.value); 
+          } catch (e) {
+            _sonuc.value = "0";
+          }
+          return;
+        }
+    
+        _sonuc.value += _deger;
+      }
+    </script>
+
+    
+    
+    
+   

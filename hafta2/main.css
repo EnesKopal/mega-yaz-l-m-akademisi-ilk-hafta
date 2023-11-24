@@ -1,0 +1,57 @@
+.sudoku{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+h1 {
+    text-align: center;
+    border: 5px solid black;
+    background-color: cyan;
+}
+
+.sudokublok {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0;
+    background-color: purple;
+    box-sizing: border-box;
+    width: auto;
+  }
+  .sudokublok2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0;
+    background-color: purple;
+    box-sizing: border-box;
+    width: auto;
+  }
+  
+  .sudokublok > input {
+    height: 50px;
+    width: 50px;
+    padding: 0 0;
+    background-color:cyan;
+    border: 1px solid black;
+    font-size: 40px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .sudokublok2 > input {
+    height: 50px;
+    width: 50px;
+    padding: 0 0;
+    background-color:purple;
+    border: 1px solid black;
+    font-size: 40px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {  
+  -webkit-appearance: none;   margin: 0; 
+}
+
